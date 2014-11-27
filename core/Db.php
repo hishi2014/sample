@@ -6,7 +6,9 @@ Class Db{
 function __construct(){
 try {
     $options = array();
-    $this->dbh = new PDO('pgsql:host=https://107.20.159.155;port=5432;dbname=dahrcqpca41iek',"kyffrcjeajphaz", "Show");
+    $url = parse_url(getenv('DATABASE_URL'));
+    $dsn = sprintf('pgsql:host=%s;dbname=%s', $url['host'], substr($url['path'], 1));
+    $this->dbh = new PDO($dsn, $url['user'], $url['pass']);
     } catch (PDOException $e) {
     print "error!: " . $e->getMessage() . "<br/>";
     die();
