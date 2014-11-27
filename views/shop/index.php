@@ -6,7 +6,7 @@
 <?php foreach ($products as $item): ?>
   <tr>
         <td><?php echo $item["name"]; ?></td>
-      <td><?php echo $item["price"]; ?></td>
+      <td style="text-align:right;"><?php echo $item["price"]; ?></td>
       <td><?php echo "<a href='show/?id=$item[0]'>個別表示</a>"; ?></td>
 </tr>
 <?php endforeach; ?>

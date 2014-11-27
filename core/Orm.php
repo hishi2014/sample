@@ -38,9 +38,7 @@ Class Orm{
     $this->dbh->rollBack();
     echo "エラーが発生しました。" . $e->getMessage();
     }
-    if ($flag){
-        print('正常に処理しました。<br>');
-    }else{
+    if (!$flag){
         print('エラーが発生しました。<br>');
     }
     $dbh = null;
@@ -56,9 +54,7 @@ Class Orm{
   $sql="update $this->table_name set $columns where id = ?";
     $sth = $this->dbh->prepare($sql);
     $flag=$sth->execute($param2);
-    if (!empty($flag)){
-        print('正常に処理しました。<br>');
-    }else{
+    if (!$flag){
         print('エラーが発生しました。<br>');
     }
     $dbh = null;
@@ -70,9 +66,7 @@ public function delete($param1){
   $sql="delete from $this->table_name where id = ?";
     $sth = $this->dbh->prepare($sql);
     $flag=$sth->execute(array($param1, ));
-    if ($flag){
-        print('正常に処理しました。<br>');
-    }else{
+    if (!$flag){
         print('エラーが発生しました。<br>');
     }
     $dbh = null;

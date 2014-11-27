@@ -4,7 +4,7 @@
   <tr><td>名前</td><td>価格(円)</td></tr>
   <tr>
         <td><?php echo $item["name"]; ?></td>
-      <td><?php echo $item["price"]; ?></td>
+      <td style="text-align:right;"><?php echo $item["price"]; ?></td>
   </tr>
   </tbody>
   </table>

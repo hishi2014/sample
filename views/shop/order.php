@@ -5,7 +5,7 @@
 <?php
 $total_price=0;
  foreach ($items as $item): ?>
-  <tr>
+  <tr style="text-align:right;">
         <td><?php echo $item->name; ?></td>
       <td><?php echo $item->price; ?></td>
       <td><?php echo $item->amount; ?></td>
@@ -18,6 +18,7 @@ $total_price=0;
 </table>
 <form action="/shop/purchase" method="post">
   <input type="hidden" name="total_price" value='<?php echo $total_price;?>'>
+  <input type="hidden" name="_token" value="<?php echo $_token; ?>">
   <input type="submit" value="購入">
 </form>
 </html>
