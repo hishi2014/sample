@@ -29,11 +29,14 @@ Class Orm{
   $sql="insert into $this->table_name ($keys) values ($place_holders)";
     $sth = $this->dbh->prepare($sql);
     $flag=false;
+    $class_name=get_class($this);
+    $class_name=lcfirst($class_name);
+    $for_lastInsertId=$class_name."s_id_seq";
     try{
     $this->dbh->beginTransaction();
     $flag=$sth->execute($this->values);
     //$this->lastInsertId=$this->dbh->lastInsertId();
-    $this->lastInsertId=$this->dbh->lastInsertId('orders_id_seq');
+    $this->lastInsertId=$this->dbh->lastInsertId($for_lastInsertId);
     $this->dbh->commit();
     }catch (Exception $e) {
     $this->dbh->rollBack();
