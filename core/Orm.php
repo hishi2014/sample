@@ -32,7 +32,8 @@ Class Orm{
     try{
     $this->dbh->beginTransaction();
     $flag=$sth->execute($this->values);
-    $this->lastInsertId=$this->dbh->lastInsertId();
+    //$this->lastInsertId=$this->dbh->lastInsertId();
+    $this->lastInsertId=$this->dbh->lastInsertId('orders_id_seq');
     $this->dbh->commit();
     }catch (Exception $e) {
     $this->dbh->rollBack();
