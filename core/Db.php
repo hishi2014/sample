@@ -5,10 +5,8 @@ Class Db{
 
 function __construct(){
 try {
-    $options = array(
-    PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
-    );
-    $this->dbh = new PDO(,$options);
+    $options = array();
+    $this->dbh = new PDO('pgsql:host=ec2-107-20-159-155.compute-1.amazonaws.com:5432;dbname=dahrcqpca41iek',"kyffrcjeajphaz", "Show");
     } catch (PDOException $e) {
     print "error!: " . $e->getMessage() . "<br/>";
     die();
