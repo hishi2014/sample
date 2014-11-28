@@ -18,6 +18,7 @@
                 data: data,
                 success: function(data, dataType)
                 {
+                  $("#message").html("変更しました。");
                 },
                 error: function(XMLHttpRequest, textStatus, errorThrown)
                 {
