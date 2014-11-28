@@ -3,7 +3,7 @@
     <script>
     $(function()
     {
-    $(".amount").bind('keyup mouseup', function () {
+    $(".amount").bind('keyup click', function () {
     $(this).parent().next().html($(this).val()*$(this).parent().prev().html());
     $("#total_price").html(0);
     $(".subtotal").each(function(){
