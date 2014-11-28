@@ -1,4 +1,4 @@
-<html>
+
 <table>
 <thead><h2>注文詳細</h2></thead>
 <td>名前</td><td>価格</td><td>個数</td><td>小計</td>
@@ -21,4 +21,3 @@ $total_price=0;
   <input type="hidden" name="_token" value="<?php echo $_token; ?>">
   <input type="submit" value="購入">
 </form>
-</html>

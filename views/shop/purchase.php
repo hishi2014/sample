@@ -1,4 +1,4 @@
-<html>
+
 <?php
 echo "$comment <br>";
 echo "order id: $order_id <br>";
@@ -18,4 +18,3 @@ echo "order id: $order_id <br>";
 </table>
 
 <a href ="/shop/index">ホーム</a>
-</html>

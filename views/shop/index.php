@@ -1,4 +1,4 @@
-<html>
+
 <table>
 <thead><h2>products</h2></thead>
 <tbody>
@@ -12,4 +12,3 @@
 <?php endforeach; ?>
 </tbody>
 </table>
-</html>

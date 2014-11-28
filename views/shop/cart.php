@@ -1,6 +1,4 @@
 
-<html>
-<head>
 <script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
     <script>
     $(function()
@@ -20,19 +18,16 @@
                 data: data,
                 success: function(data, dataType)
                 {
-                    $("#unko").html(data);
                 },
                 error: function(XMLHttpRequest, textStatus, errorThrown)
                 {
-                    alert('Error : ' + errorThrown);
+                    alert('カートの変更処理に異常が発生しました。 : ' + errorThrown);
                 }
             });
             return false;
   });
   });
     </script>
-</head>
-<body>
 <table style="text-align:right;">
 <tbody>
 <thead><h2>カート</h2></thead>
@@ -56,5 +51,3 @@ if(!empty($items)){
 </table>
 <a href='/shop/order'>レジに進む</a><br>
 <a href ="/shop/index">ホーム</a>
-</body>
-</html>
