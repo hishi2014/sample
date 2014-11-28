@@ -126,6 +126,8 @@ protected function editAction(){
         $comment='正常に購入処理が終了しました。';
       }else{
         $comment='購入処理が正常に完了しませんでした。';
+        $items=array();
+        $total_price=0;
       }
       $argument=compact('comment');
       $argument+=compact('items');
